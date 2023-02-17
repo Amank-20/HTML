@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+</head>
+<body>
+    <header><h1>Registration Form</h1></header><hr>
+    <main>
+        <form action="/action.javascript">
+            <h4>Fill Your Credentials</h4>
+            <input type="text" placeholder="User Name"><br><br>
+            <input type="password"placeholder="password"><br>
+            <label for="1">
+                <h4>Select your Class</h4>
+            <input type="radio" value="Class XI" name="class" id="1">Class XI
+            </label><br><br>
+            <label for="2">
+            <input type="radio" value="Class XII" name="class" id="2">Class XII
+            </label><br>
+            <h4>Select your fav subject</h4>
+            <label for="101">
+                <input type="checkbox" value="Physics" name="Subject" id="101">Physics
+            </label><br><br>
+            <label for="102">
+                <input type="checkbox" value="Chemistry" name="Subject" id="102">Chemistry
+            </label><br><br>
+            <label for="103">
+                <input type="checkbox" value="Maths" name="Subject" id="103">Maths
+            </label><br><br>
+            <label for="104">
+                <input type="checkbox" value="CSE" name="Subject" id="104">Computer Science
+            </label><br><br>
+            <h4>In which City you want to read?</h4>
+            <select name="city">
+                <option value="Delhi">Delhi</option>
+                <option value="Gurgaon">Gurgaon</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Pune">Pune</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Sikkim">Sikkim</option>
+            </select><br><br>
+            <textarea name="feedback" placeholder="Please Give your Feedback here!" rows="5" cols="5"></textarea><br><br>
+            <input type="Submit" value="Submit">
+        </form>
+    </main>
+    
+</body>
+</html>
