@@ -6,14 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Form</title>
 </head>
+<style>
+    fieldset{
+       background-color:peachpuff; 
+    }
+   legend {
+        color:red;
+    }
+    select[name="city"]{
+        color:blue;
+    }
+    input:checked {
+    border: none;
+    outline: 2px solid deeppink;
+}
+  
+</style>
 <body>
     <fieldset>
         <legend><h1>Registration Form</h1></legend>
     <main>
         <form action="/action.javascript">
             <h4>Fill Your Credentials</h4>
-            <input type="text" placeholder="Name"><br><br>
-            <input type="password"placeholder="password"><br><br>
+            <label>User Name:</label><br>
+            <input type="text" placeholder="User Name" maxlength="20"><br><br>
+            <label>Email Id:</label><br>
+            <input type="email" placeholder="Email"><br><br>
+            <label>Password:</label><br>
+            <input type="password"placeholder="Password" maxlength="10"><br><br>
             <label for="birthday">Birthday:</label>
             <input type="date" id="birthday" name="birthday">
             <label for="1">
@@ -50,10 +70,8 @@
             <input type="button" onclick="alert('Hello Aman!')" Value= "Click Me!"><br><br>
             <label for="phone">Enter your phone number:</label>
             <input type="tel" id="phone" name="phone" maxlength="10"><br><br>
-            <label for="email">Enter Your Mail for any query:</label>
-            <input type="email" id="email"><br><br>
             <input type="Submit" value="Submit">
-            <input type="reset" value="Submit">
+            <input type="reset" value="Reset">
         </form>
     </main>
     </fieldset>
