@@ -16,8 +16,13 @@
         a[target="_main"] {
             color:indigo;       
         }
-        ol[type="1"] {
+        /*BoxModel*/
+        ol{
             background-color: burlywood;
+            width: 300px;
+            border: 10px solid black;
+            padding: 30px;
+            margin: 20 px;
         }
         /*typeselector*/
         b{
@@ -26,7 +31,7 @@
         Button {
           width: 10em;
           height: 5ex;
-          background-image: linear-gradient(135deg, skyblue 40%, red);
+          background-image: linear-gradient(135deg, skyblue , red);
           border: none;
           border-radius: 5px;
           font-weight: bold;
@@ -45,7 +50,7 @@
         div{
             background-color:cadetblue;
             color:black;
-            padding :5px;
+            padding :10px;
         }
        
         /*pseudo class */
@@ -53,7 +58,7 @@
            background-color:coral;
          } 
          .Button:active {
-           box-shadow: 5px 2px 5px blueviolet ;
+           box-shadow: 5px 2px 5px black ;
         }
          /*some type or example of pseudo class */
          article mark:first-child {
@@ -71,18 +76,61 @@
             font-size: 150%;
          }
          .container {
-            display: grid;
+            display:flex;
             grid-template-columns: 1fr 1fr 1fr;
-            column-gap: 5px;
+            column-gap: 10px;
+            width:77%;
+            position:relative;
+            border:2px solid black;
+            box-sizing:border-box;
          }
 
          img {
-            max-width: 200%;
+            width: 150px;
+            height: 150px;
+            border: 1px solid green;
+            box-sizing: border-box;
+            
         }
 
         .text {
-         font-size: 20px;
+         font-size: 1.5em;
         }
+        .topleft{
+            position:absolute;
+            bottom: 5px;
+
+            left: 75px;
+            font-size: 15px;
+        }
+        
+        .nav {
+            background-color:darkgoldenrod;
+            list-style-type: none;
+ 
+        }
+
+        .nav li {
+            display: inline-block;
+            font-size: 20px;
+            padding: 10px;
+            
+        }
+        ul{
+            display:inline-block;
+            height: 50px;
+        }
+        @media screen and(min-height:50px), (orientation: landscape) {
+            .container {
+            background-color: rebeccapurple;
+        }
+        }
+        @media (hover: hover) {
+           div {
+           color:brown;
+        }
+        }
+       
     </style>
 </head>
 <body>
@@ -101,9 +149,9 @@
             height="100"/>
         </a>
         <h3>I know these Languages:</h3>
-        <div>Hindi</div><br>      
-        <div>English</div><br>
-        <div>Bhojpuri</div><br>
+        <div class="lang">Hindi</div><br>      
+        <div class="lang">English</div><br>
+        <div class="lang">Bhojpuri</div><br>
         <ol type="1">
             <li><h3>My Strength:</h3></li>
                <ul type="square">
@@ -114,6 +162,7 @@
                   <li>Punctual</li>
                   <li>Adaptive</li>
                </ul>
+            
             <li><h3>My Weakness:</h3></li>
             <ul type="square">
                 <li>Public Speaking</li>
@@ -133,22 +182,28 @@
     <div class="container">    
         <div class="image">  
         <figure>  
-            <img src="https://scontent.fhyd1-3.fna.fbcdn.net/v/t39.30808-6/318784101_3435242990091456_2364905183045429190_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=s3M5bLYF7bAAX_2a0ji&_nc_ht=scontent.fhyd1-3.fna&oh=00_AfDivMlrag4pvwCVUTPjn6k2XZun8Zo3RrSf7iL9XIv4vQ&oe=63F90D17" alt="Aman" width="200" height="200" />  
+            <img src="https://scontent.fhyd1-3.fna.fbcdn.net/v/t39.30808-6/318784101_3435242990091456_2364905183045429190_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=2IAOCOwF1jgAX-o4DEJ&_nc_ht=scontent.fhyd1-3.fna&oh=00_AfB2pU_XsQ5lhRWL-HBuPHCbHBEo-JFxj0zPNOzsVu5tlw&oe=6400F617" alt="Aman" />  
             <figcaption>Fig.1.1 - Blessed😌💙</figcaption>
         </figure>
         </div>
         <div class="text">
         <pre>Hello Everyone, This is Aman Kumar from Patna, Bihar.
-I have 9 months experienced in value momentum as <mark>Front End Developer.</mark>
+I have 9 months experienced in value momentum as <mark>QA.</mark>
 I have completed my BTech from <b>ACET(CSE)</b>, 12th from Sarvodaya Sr.
 Secondary School and 10th from DAV School walmi,Patna.
+As i have many excellence and certificates throughout
+my academics that could be counted as one of my strength.
         </pre>
         </div>
-    </div>    
-        <nav>
-            <a class="highlight" href="https://www.facebook.com/profile.php?id=100008173664486"target="_main">Facebook</a><br>
-            <a class ="highlight" href="https://github.com/Amank-20/HTML"target="_main">Github</a>
-        </nav>
+        <div class="topleft"><b>Aman kumar</b></div>
+    </div><br>
+    <h3>Visit these all links to know more about me.</h3>
+        <ul class="nav">
+          <li><a class="highlight" href="https://www.facebook.com/profile.php?id=100008173664486"target="_main">Facebook</a></li>
+           <li><a class ="highlight" href="https://github.com/Amank-20/HTML"target="_main">Github</a></li>
+           <li><a class ="highlight" href="https://www.linkedin.com/feed/"target="_main">Linkedln</a></li>
+        </ul>
+
         <p id="Aman">Aman woke up at <time>8:00</time>am.</p>
         <p><strong>Do you people like my portfolio?</strong></p>
         <button class="Button">yes</button><br><br>

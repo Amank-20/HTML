@@ -14,6 +14,47 @@
         font-size:2rem;
 
     }
+    .container {
+        position: relative;
+        display:inline-block;
+    }
+    img{
+        display:inline;
+        width:100%;
+        height:auto;
+    }
+
+    .topleft {
+        position: absolute;
+        top: 8px;
+        left: 16px;
+        font-size: 18px;
+    }
+    .topright{
+        position:absolute;
+        top: 8px;
+        right: 16px;
+        font-size: 18px;
+    }
+    .bottomright{
+        position:absolute;
+        bottom:8px;
+        right: 16px;
+        font-size: 18px;
+    }
+    .bottomleft{
+        position:absolute;
+        bottom: 8px;
+        left: 16px;
+        font-size: 18px;
+    }
+    .center{
+        position:absolute;
+        top: 50%;
+        width:100%;
+        text-align: center;
+        font-size: 18px;
+    }
     sub{
         font-size: 2vw;
     }
@@ -24,6 +65,50 @@
         color: black;
         font-size: 4ch;
     }
+    a:after{
+        content: " ("attr(href)"0)";
+    }
+    .grad {
+        height: 150px;
+        width: 150px;
+        background-color:whitesmoke; 
+        background-image: conic-gradient(violet,indigo,blue,green,yellow,orange,red);
+        transition: width 3s;
+        transition-timing-function: cubic-bezier(0.5, 0.7, 1.0, 0.5);
+    }
+    .grad1 {
+        height: 150px;
+        width: 150px;
+        background-color:whitesmoke; 
+        background-image: radial-gradient(circle,violet,indigo,blue,green,yellow,orange,red);
+        transition: width 3s;
+        transition-timing-function: cubic-bezier(0.5, 0.7, 1.0, 0.5);
+    }
+    .grad2 {
+        height: 150px;
+        width: 150px;
+        background-color:whitesmoke; 
+        background-image: linear-gradient(to right,violet,indigo,blue,green,yellow,orange,red);
+        transition: width 3s;
+        transition-timing-function: cubic-bezier(0.5, 0.7, 1.0, 0.5);
+    }
+    .grad3 {
+        height: 150px;
+        width: 150px;
+        background-color:whitesmoke; 
+        background-image: repeating-radial-gradient(circle,violet,indigo,blue 10%,green 10%,yellow,orange,red 10%);
+        transition: width 3s;
+        transition-timing-function: cubic-bezier(0.5, 0.7, 1.0, 0.5);
+    }
+    .grad:hover,.grad1:hover,.grad2:hover,.grad3:hover{
+        width:200px;
+    }
+    #lol {
+  height: 50px;
+  width: 400px;
+  background-color:whitesmoke; 
+  background-image: conic-gradient(red,yellow, green,blue);
+}
 </style>
 <body>
     
@@ -34,7 +119,7 @@
     <head>
         <title>My First Page</title>  <!--This is body tag-->
         <body>
-            <h1>Hello World, Aman here</h1>
+            <h1 id="lol">Hello World, Aman here!!</h1>
             <p>
                 <u>I am learning html.</u><br>
                 <big>Hyper Text Markup Language</big><br>
@@ -45,7 +130,19 @@
             <a href="https://github.com/Amank-20/HTML/blob/main/index.html">Github</a>
             <br>
             <hr/>
-            <img src="https://scontent.fhyd1-3.fna.fbcdn.net/v/t39.30808-6/318784101_3435242990091456_2364905183045429190_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=2IAOCOwF1jgAX-o4DEJ&_nc_ht=scontent.fhyd1-3.fna&oh=00_AfB2pU_XsQ5lhRWL-HBuPHCbHBEo-JFxj0zPNOzsVu5tlw&oe=6400F617" alt="Aman" width="200" height="200">
+            <div class="container">
+                 <img src="https://scontent.fhyd1-3.fna.fbcdn.net/v/t39.30808-6/318784101_3435242990091456_2364905183045429190_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=2IAOCOwF1jgAX-o4DEJ&_nc_ht=scontent.fhyd1-3.fna&oh=00_AfB2pU_XsQ5lhRWL-HBuPHCbHBEo-JFxj0zPNOzsVu5tlw&oe=6400F617" alt="Aman" width="500" height="250">
+                 <div class="topleft">Heyy</div>
+                 <div class="topright">Hii</div>
+                 <div class="bottomleft">Hello</div>
+                 <div class="bottomright">ka Baua</div>
+                 <div class="center">Hello World!</div>
+            </div>
+            <h1>Hey Rainbows:</h1>
+            <div class="grad"></div><br>
+            <div class="grad1"></div><br>
+            <div class="grad2"></div><br>
+            <div class="grad3"></div>
             <hr/>
             <b><p>(N<sub>2</sub>O), also known as <mark>Laughing gas</mark>.</p></b>
             <b><p>(a<sup>2</sup>+b<sup>2</sup>+2ab), basic Maths formula. </p></b>
