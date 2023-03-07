@@ -14,7 +14,7 @@
          }
         /*Attribute class*/
         a[target="_main"] {
-            color:indigo;       
+            color:white;      
         }
         /*BoxModel*/
         ol{
@@ -48,15 +48,15 @@
             text-shadow: 4px 4px 4px royalblue;
         }
         div{
-            background-color:cadetblue;
+            background-color: darkgray;
             color:black;
             padding :10px;
         }
        
-        /*pseudo class */
+        /*pseudo class 
          div:hover{
            background-color:coral;
-         } 
+         } */
          .Button:active {
            box-shadow: 5px 2px 5px black ;
         }
@@ -75,8 +75,8 @@
             color:darkgoldenrod;
             font-size: 150%;
          }
-         .container {
-            display:flex;
+         .box {
+            display:grid;
             grid-template-columns: 1fr 1fr 1fr;
             column-gap: 10px;
             width:77%;
@@ -120,14 +120,72 @@
             display:inline-block;
             height: 50px;
         }
+        h2{
+            font-weight: bold;
+            text-shadow: 3px 2px 2px violet;
+        }
+        .container{
+            display: flex;
+            width: 1000px;
+            height:500px;
+            border:2px slateblue solid;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            align-content: center;
+        }
+        .flex-item{
+            width: 250px;
+            height:200px;
+            margin:10px;
+            background-color: lightskyblue;
+            border: 2px darkblue;
+            text-align:center;
+            font-size: 20px;
+            align-self: center;
+            color:white;
+            font-weight:bold;
+            line-height: 2;
+        }
+        #item1{
+            background-color:blueviolet;
+            padding:10px;
+            align-items: center;
+        }
+        #item2{
+            background-color:aqua;
+            padding:10px;
+        }
+        #item3{
+            background-color:cornflowerblue;
+            padding:10px;
+        }
+        #item4{
+            background-color:darkolivegreen;
+            padding: 10px;
+        }
+        #item5{
+            background-color:darksalmon;
+            padding:10px;
+        }
+        #item6{
+            background-color:deepskyblue;
+            padding:10px;
+        }
+        #item1:hover{
+            background-color: rebeccapurple;
+        }
+
+    
         @media screen and(min-height:50px), (orientation: landscape) {
-            .container {
+            .box {
             background-color: rebeccapurple;
         }
         }
         @media (hover: hover) {
-           div {
-           color:brown;
+           #item1 {
+           background-color:brown;
+           cursor:pointer;
         }
         }
        
@@ -179,7 +237,7 @@
             <summary>My Portfolio Summary</summary>
             <p id="Aman">Aman is a Good Learner.</p>
         </details>
-    <div class="container">    
+    <div class="box">    
         <div class="image">  
         <figure>  
             <img src="https://scontent.fhyd1-3.fna.fbcdn.net/v/t39.30808-6/318784101_3435242990091456_2364905183045429190_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=2IAOCOwF1jgAX-o4DEJ&_nc_ht=scontent.fhyd1-3.fna&oh=00_AfB2pU_XsQ5lhRWL-HBuPHCbHBEo-JFxj0zPNOzsVu5tlw&oe=6400F617" alt="Aman" />  
@@ -197,6 +255,16 @@ my academics that could be counted as one of my strength.
         </div>
         <div class="topleft"><b>Aman kumar</b></div>
     </div><br>
+    <h2>Full Stack Development Course:</h2>
+    <div class="container">
+        <div class="flex-item" id="item1" ><a href="https://youtu.be/evknSAkUIvs" target="_main">GIT</a></div>
+        <div class="flex-item" id="item2"><a href="https://www.youtube.com/" target="_main">HTML</a></div>
+        <div class="flex-item" id="item3"><a href="https://www.w3schools.com/CSS/css_selectors.asp" target="_main">CSS</a></div>
+        <div class="flex-item" id="item4">Javascript</div>
+        <div class="flex-item" id="item5">SQl</div>
+        <div class="flex-item" id="item6">JAVA</div>
+        
+    </div>
     <h3>Visit these all links to know more about me.</h3>
         <ul class="nav">
           <li><a class="highlight" href="https://www.facebook.com/profile.php?id=100008173664486"target="_main">Facebook</a></li>
@@ -207,7 +275,7 @@ my academics that could be counted as one of my strength.
         <p id="Aman">Aman woke up at <time>8:00</time>am.</p>
         <p><strong>Do you people like my portfolio?</strong></p>
         <button class="Button">yes</button><br><br>
-        <button class="Button">no</button<br>   
+        <button class="Button">no</button><br>   
         
    </fieldset>
     </main>
