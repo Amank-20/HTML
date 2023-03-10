@@ -48,7 +48,7 @@
             text-shadow: 4px 4px 4px royalblue;
         }
         div{
-            background-color: darkgray;
+            background-color:antiquewhite;
             color:black;
             padding :10px;
         }
@@ -88,8 +88,8 @@
          img {
             width: 150px;
             height: 150px;
-            border: 1px solid green;
-            box-sizing: border-box;
+            border: 1px solid black;
+            
             
         }
 
@@ -175,8 +175,29 @@
         #item1:hover{
             background-color: rebeccapurple;
         }
+        .itemA { grid-area: header;}
+        .itemB { grid-area: menu;}
+        .itemC { grid-area: main; }
+        .itemD { grid-area: right; }
+        .itemE { grid-area: footer; }
 
-    
+        .myself{
+            display:grid;
+            grid-template-areas:
+                 'header header header header header header'
+                 'menu main main main right right'
+                 'menu main main main right right'
+                 'menu footer footer footer footer footer';
+            gap: 10px;
+            background-color:cornflowerblue;
+            padding:10px;
+        }
+        .myself > div {
+            background-color:rgba(250, 250, 250, 0.6);
+            text-align: center;
+            padding: 10px;
+            font-size: 20px;
+        }
         @media screen and(min-height:50px), (orientation: landscape) {
             .box {
             background-color: rebeccapurple;
@@ -255,6 +276,14 @@ my academics that could be counted as one of my strength.
         </div>
         <div class="topleft"><b>Aman kumar</b></div>
     </div><br>
+    <h2>Grid layout:</h2>
+    <div class="myself">
+        <div class="itemA" style="background-color: aliceblue; "><b>Aman Kumar</b></div>
+        <div class="itemB" style="background-color: black;"><img src="https://scontent.fhyd1-5.fna.fbcdn.net/v/t39.30808-6/334088794_699611285288388_1179249095116582766_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=TgFVxGQtOjUAX8JwRV-&_nc_oc=AQnuFKBhlo2ZuhtO5pS6TUh6aiUbzwSsGchyY3QmlZ5Bsy8dZowhq-wJdAE2A7XYXbw7D3xiDHL160dRdcOEUioq&_nc_ht=scontent.fhyd1-5.fna&oh=00_AfDqt2I-UNoE_0tp3C80TVlPQqUHB_8cfI-yesWyaZczmw&oe=64103C56" alt="Aman" ></div>
+        <div class="itemC" style="background-color:darkolivegreen;">Hey it's Aman, worked as Software Engineer-trainee at ValueMomentum for 9 months.</div>
+        <div class="itemD" style="background-color: darkolivegreen;"><u>Hobbies</u></div>
+        <div class="itemE" style="background-color:lightcoral">Contact me at 6205664479</div>
+    </div>
     <h2>Full Stack Development Course:</h2>
     <div class="container">
         <div class="flex-item" id="item1" ><a href="https://youtu.be/evknSAkUIvs" target="_main">GIT</a></div>
